@@ -3,7 +3,14 @@
 [3.56 and Lower Minimum Version Supported]
 
 Official Thread:
-http://www.psx-place.com/threads/ps3xploit-tools-v2-0-improved-flash-writers-dumpers-even-easier-to-install-cfw-on-4-82-ofw.16139/
+https://www.psx-place.com/threads/ps3xploit-4-84-hfw-flash-writer-idps-flash-dumpers-v2-0-1-now-install-cfw-from-4-84.23123/
+
+Official HFW Thread:
+https://www.psx-place.com/threads/update-ps3-hfw-hybrid-firmware-4-84-2-ps3xploit-han-flash-tools-restored-for-4-84-ofw-users.23094/
+
+v2.0.1
+
+    Updated To Support 4.84 HFW
 
 v2.0
 

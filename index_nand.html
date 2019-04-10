@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<script src="ps3xploit_writer_v20.js"></script>
+<script src="ps3xploit_writer_v201.js"></script>
 <head>
 <meta charset="UTF-8">
-<title>PS3Xploit Team - PS3 NAND Flasher v2.0</title>
+<title>PS3Xploit Team - PS3 NAND Flasher v2.0.1</title>
 <script>
 function initROP()
 {
@@ -51,7 +51,7 @@ function initROP()
 		else if(used_port===1002){fp_root=convertString("xxxxxxxx/dev_ms/");f_off_start=0x4;}
 		else {used_port=0;fp_root=convertString("xxxx/dev_usb000/");}
 		
-		usb_fp=fp_root+convertString("flash_482.hex")+unescape("\u0000")+convertString(fread_mode)+unescape("\u0000\u0000\u4141\u4141\u4141\u4141")
+		usb_fp=fp_root+convertString("flash_484.hex")+unescape("\u0000")+convertString(fread_mode)+unescape("\u0000\u0000\u4141\u4141\u4141\u4141")
 		+hexw2bin(gadget3_addr)+hexw2bin(toc_addr)+unescape("\u0000\u4141\u4141\u4141\u4141\u4141\u4141\u4141\u4141")+hexw2bin(gadget7_addr)+hexw2bin(toc_addr)+unescape("\uFD7E");
 		function reload()
 		{
@@ -216,32 +216,33 @@ function triggerX()
 	disable_cb();
 	disable_btn();
 	setTimeout(trigger,1000,jump_1_addr);
-	setTimeout(success,2000,hr+"<h1><b><font color=%22386E38%22>NAND Flash memory patch operation completed..!</font></b></h1><h3><b><font color=%22000000%22>You can dump the NAND now & check that the patch has been applied successfully."+br+"Then reboot to enable the patches & install the 4.82 CFW of your choice...</font></b></h3>");
+	setTimeout(success,2000,hr+"<h1><b><font color=%22386E38%22>NAND Flash memory patch operation completed..!</font></b></h1><h3><b><font color=%22000000%22>You can dump the NAND now & check that the patch has been applied successfully."+br+"Then reboot to enable the patches & install the 4.84 CFW of your choice...</font></b></h3>");
 }
 </script>
 </head>
 	<body id="BodyID" bgcolor="#FFD097">
 	<div id="HeaderID" style="color:#CC2010">
-	<h1>PS3 NAND Flasher v2.0</h1>
+	<h1>PS3 NAND Flasher v2.0.1 for HFW 4.84</h1>
 	<h4><font color="#000000">by PS3Xploit Team: </font></h2><b> W | esc0rtd3w | habib | bguerville</b></font><hr></h4>
-	<h4><font color="#000000">v2.0 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)  |</font> habib <font color="#000000">(flash_482.hex)</font><hr></h4>
+	<h4><font color="#000000">v2.0.1 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)  |</font> habib <font color="#000000">(flash_484.hex)</font><hr></h4>
 	<font color="#000000">Many thanks to xerpi for the userland memory leak exploit ps3 port, zecoxao & Joonie for their early & continued support, mysis for documenting vsh exports & plugins, the psdevwiki contributors of course, STLcardsWS for his long standing contribution & all ps3 community hackers/devs past & present, you know who you are...<hr>
-	<h3>Supports Official 4.82 OFW Firmware ONLY!!!<br>
+	<h3>Supports 4.84 HFW Firmware ONLY!!!<br>
 	<font color="#CC2010">DO NOT USE ON ANY OTHER FIRMWARE VERSION OR ON CFW OR YOU WILL BRICK YOUR CONSOLE!</font>
 	<br>Supports Phat Models CECH-Axx/Bxx/Cxx/Exx/Gxx</h3>
-	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br></font>
+	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br><br>PS3Xploit Team Donations: <a href="https://www.paypal.me/ps3xploit">https://www.paypal.me/ps3xploit</a><br></font>
 	<hr>
 	</div>
 	<font color="#CC2010">
-	<h3><b>** CAUTION: MISHANDLED FIRMWARE FLASHING CAN LEAD TO A BRICK - USE AT YOUR OWN RISK!!! **</b>
+	<h4><b>** CAUTION: MISHANDLED FIRMWARE FLASHING CAN LEAD TO A BRICK - USE AT YOUR OWN RISK!!! **</b>
 	<br><b>** DO NOT USE THIS ON CECH-4xxxA OR YOU WILL BRICK YOUR CONSOLE!!! **</b>
 	<br><b>** DO NOT POWER OFF THE CONSOLE ONCE STARTED. IT MAY RESULT IN A BRICK! **</b>
-	<br><b>** MAKE SURE TO USE AN UNMODIFIED & MD5 CHECKED "flash_482.hex" FILE ON USB DEVICE! **</b></h3>
+	<br><b>** MAKE SURE TO USE AN UNMODIFIED & MD5 CHECKED "flash_484.hex" FILE ON USB DEVICE! **</b>
+	<br><b>** THE MD5 OF "flash_484.hex" MUST BE: AB2B3A2E23FA731301260F5702FC4101 **</b></h4>
 	</font>
 	<h3><i><b>THE PATCHING OPERATION MAY TAKE A FEW MINUTES</b></i></h3>
 	<hr>	
-	<font color="#CC2010"><b><i>PS3Xploit 4.82 Flash Memory patch path:</i></b></font><br><br>/dev_usb000/flash_482.hex<input type="checkbox" id="usb0" name="/dev_usb000" onclick="usb(0);" checked/> | /dev_usb001/flash_482.hex<input type="checkbox" id="usb1" name="/dev_usb001" onclick="usb(1);"/>	| /dev_usb006/flash_482.hex<input type="checkbox" id="usb6" name="/dev_usb006" onclick="usb(6);"/>  <button id="btnReset" type="button" onclick="resetOptions(true);">Reset Path Options</button>
-	<br>/dev_sd/flash_482.hex<input type="checkbox" id="sd" name="/dev_sd" onclick="usb(1000);"/>     | /dev_cf/flash_482.hex<input type="checkbox" id="cf" name="/dev_cf" onclick="usb(1001);"/>    	| /dev_ms/flash_482.hex<input type="checkbox" id="ms" name="/dev_ms" onclick="usb(1002);"/><br><br>
+	<font color="#CC2010"><b><i>PS3Xploit 4.84 Flash Memory patch path:</i></b></font><br><br>/dev_usb000/flash_484.hex<input type="checkbox" id="usb0" name="/dev_usb000" onclick="usb(0);" checked/> | /dev_usb001/flash_484.hex<input type="checkbox" id="usb1" name="/dev_usb001" onclick="usb(1);"/>	| /dev_usb006/flash_484.hex<input type="checkbox" id="usb6" name="/dev_usb006" onclick="usb(6);"/>  <button id="btnReset" type="button" onclick="resetOptions(true);">Reset Path Options</button>
+	<br>/dev_sd/flash_484.hex<input type="checkbox" id="sd" name="/dev_sd" onclick="usb(1000);"/>     | /dev_cf/flash_484.hex<input type="checkbox" id="cf" name="/dev_cf" onclick="usb(1001);"/>    	| /dev_ms/flash_484.hex<input type="checkbox" id="ms" name="/dev_ms" onclick="usb(1002);"/><br><br>
 	<button id="btnROP" type="button" onclick="initROP();" autofocus>Initialize exploitation</button>
 	<button id="btnTrigger" disabled="true" type="button" onclick="triggerX();">Patch NAND Flash Memory</button>
 	<div id="result" style="color:#CC2010"></div><br>

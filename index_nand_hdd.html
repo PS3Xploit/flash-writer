@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<script src="ps3xploit_writer_v20.js"></script>
+<script src="ps3xploit_writer_v201.js"></script>
 <head>
 <meta charset="UTF-8">
-<title>PS3Xploit Team - PS3 NAND Flasher v2.0 - HDD Edition</title>
+<title>PS3Xploit Team - PS3 NAND Flasher v2.0.1 - HDD Edition</title>
 <script>
 function initROP()
 {
@@ -43,7 +43,7 @@ function initROP()
 		total_loops++;
 		clearLogEntry();
 
-		usb_fp=convertString("xxxx/dev_hdd0/photo/"+y+"/"+m+"/"+d+"/"+"flash_482.jpg")+unescape("\u0000")+convertString(fread_mode)+unescape("\u0000\u0000\u4141\u4141\u4141\u4141")
+		usb_fp=convertString("xxxx/dev_hdd0/photo/"+y+"/"+m+"/"+d+"/"+"flash_484.jpg")+unescape("\u0000")+convertString(fread_mode)+unescape("\u0000\u0000\u4141\u4141\u4141\u4141")
 		+hexw2bin(gadget3_addr)+hexw2bin(toc_addr)+unescape("\u0000\u4141\u4141\u4141\u4141\u4141\u4141\u4141\u4141")+hexw2bin(gadget7_addr)+hexw2bin(toc_addr)+unescape("\uFD7E");
 		function reload()
 		{
@@ -211,34 +211,35 @@ function triggerX()
 	disable_cb();
 	disable_btn();
 	setTimeout(trigger,1000,jump_1_addr);
-	setTimeout(success,2000,hr+"<h1><b><font color=%22386E38%22>NAND Flash memory patch operation completed..!</font></b></h1><h3><b><font color=%22000000%22>You can dump the NAND now & check that the patch has been applied successfully."+br+"Then reboot to enable the patches & install the 4.82 CFW of your choice...</font></b></h3>");
+	setTimeout(success,2000,hr+"<h1><b><font color=%22386E38%22>NAND Flash memory patch operation completed..!</font></b></h1><h3><b><font color=%22000000%22>You can dump the NAND now & check that the patch has been applied successfully."+br+"Then reboot to enable the patches & install the 4.84 CFW of your choice...</font></b></h3>");
 }
 </script>
 </head>
 	<body id="BodyID" bgcolor="#FFD097">
 	<div id="HeaderID" style="color:#CC2010">
-	<h1>PS3 NAND Flasher v2.0 - HDD Edition</h1>
+	<h1>PS3 NAND Flasher v2.0.1 for HFW 4.84 - HDD Edition</h1>
 	<h4><font color="#000000">by PS3Xploit Team: </font></h2><b> W | esc0rtd3w | habib | bguerville</b></font><hr></h4>
-	<h4><font color="#000000">v2.0 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)  |</font> habib <font color="#000000">(flash_482.hex)</font><hr></h4>
+	<h4><font color="#000000">v2.0.1 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)  |</font> habib <font color="#000000">(flash_484.hex)</font><hr></h4>
 	<font color="#000000">Many thanks to xerpi for the userland memory leak exploit ps3 port, zecoxao & Joonie for their early & continued support, mysis for documenting vsh exports & plugins, the psdevwiki contributors of course, STLcardsWS for his long standing contribution & all ps3 community hackers/devs past & present, you know who you are...<br>Thanks as well to littlebalup for providing the idea & the related javascript used to make this HDD edition.<hr>
-	<h3>Supports Official 4.82 OFW Firmware ONLY!!!<br>
+	<h3>Supports 4.84 HFW Firmware ONLY!!!<br>
 	<font color="#CC2010">DO NOT USE ON ANY OTHER FIRMWARE VERSION OR ON CFW OR YOU WILL BRICK YOUR CONSOLE!</font>
 	<br>Supports Phat Models CECH-Axx/Bxx/Cxx/Exx/Gxx</h3>
-	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br></font>
+	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br><br>PS3Xploit Team Donations: <a href="https://www.paypal.me/ps3xploit">https://www.paypal.me/ps3xploit</a><br></font>
 	<hr>
 	</div>
-	<font color="#CC2010">
-	<h3><b>** CAUTION: MISHANDLED FIRMWARE FLASHING CAN LEAD TO A BRICK - USE AT YOUR OWN RISK!!! **</b>
+	<font color="#CC2010" autofocus>
+	<h4><b>** CAUTION: MISHANDLED FIRMWARE FLASHING CAN LEAD TO A BRICK - USE AT YOUR OWN RISK!!! **</b>
 	<br><b>** DO NOT USE THIS ON CECH-3xxx/4xxx OR YOU WILL BRICK YOUR CONSOLE!!! **</b>
 	<br><b>** DO NOT POWER OFF THE CONSOLE ONCE STARTED. IT MAY RESULT IN A BRICK! **</b>
-	<br><b>** MAKE SURE TO USE AN UNMODIFIED & MD5 CHECKED "flash_482.jpg" FILE! **</b></h3>
+	<br><b>** MAKE SURE TO USE AN UNMODIFIED & MD5 CHECKED "flash_484.jpg" FILE! **</b>
+	<br><b>** THE MD5 OF "flash_484.jpg" MUST BE: AB2B3A2E23FA731301260F5702FC4101 **</b></h4>
 	</font>
 	<h3><i><b>THE PATCHING OPERATION MAY TAKE A FEW MINUTES</b></i></h3>
-	<hr><h2><b><u>Step</u> 1:</b></h2>Download the PS3Xploit 4.82 Flash Memory patch file to the PS3 Photo folder so the exploit can load it from the internal HDD.
-	<h3><b><a href="flash_482.jpg">Press here &#x2192 File &#x2192 Save Target &#x2192 System Storage (Photo)</a></b></h3>
+	<hr><h2><b><u>Step</u> 1:</b></h2>Download the PS3Xploit 4.84 Flash Memory patch file to the PS3 Photo folder so the exploit can load it from the internal HDD.
+	<h3><b><a href="flash_484.jpg">Press <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAIAAAA2bnI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuNv1OCegAAALISURBVDhPY/h/YToaOruxz8bGVkpcgpeHR1JM3MbGZv+ydjQ1QISic8fcmmB3SylxYS5ubl5uHiEVWR5eHm5ubnFRIW9Hk1WTSpEVI3R2lsXKSIpycnPzcHFz8HBzSAroLCrn01NkB5rBxQ00S1JMODfOG64eqnNKfSrQKqDxQMDFw80jyKdQG6F1Y7pCXSS3ED9QEGg1Dw8P0PKu8niEzhOrWmWlxCDagICTh1vc2Uj3RLf6ngbdw13CNjpAbUA7IUBaQvTUmg6ozsxoL6gwCHBxi/Cq9KXone4TsNNW396gOSOXS5AX6GA48HcxB+l8fmS2nLQ4VAwUMFyijrraJ3ulUl0FefmkU930z00Uj7AFSsAB0M1nN05g8PDwgPC5gH4BOktKSH19lcr8fD5ZMS4eXl45UfUVpTr72/j15Xm5gMEHBZaWlgzCwrCA4QbGH5dcgZ/W+T6JMBuIJcDQEnU3VL0yWbkqjI+PE8gFCXJxCQoKMoiIiIB4YHcKW6jqHulUW1TCJynCCwZ8QCTEp9CbpLOnRchMFRi+QJXAQAbpdHZ2BnIE+PnFpcW0J2YYn50s7mAoKCUuKCkuJAki+aXEJAxU9Xa3a0/IEJQSERIQAOo0NTVleHxwpoqirKSYmKyjoeGFqWbXZ1ruaLPY2Wa+q818d5vFrjazXW3WO9pNLk7VvzVbPsReUlxcTUnu5JouUKxUZYZJy8nqFUVYrGu0WtdgtqERiMzXN1qsB5FAZLq+0XJtg9m6Buu+fElFufwEX2h8Xtvaa26ir6KprqyFBaGJW5rqP9k/CaoTiOa2ZVmbG2niBRoaGrYWRiv6CyFaoDqBaO2UUmc7S11dXT1sACjubGexvC8frh6hE4hubOutz4t0d7Y1MjIyhgEg29PFtrkw5tb2XmTFKDohaNfCZisrK3NzcwsLCwi5eVYtmpr/F6YDAKT6XV0sp3K+AAAAAElFTkSuQmCC"> Here. File → Save Target → System Storage (Photo)</a></b></h3>
 	<p>Patch will be saved as : <b><span id="filePath"></span></b></p>
 	<h2><b><u>Step</u> 2:</b></h2>
-	<button id="btnROP" type="button" onclick="initROP();" autofocus>Initialize exploitation</button>
+	<button id="btnROP" type="button" onclick="initROP();">Initialize exploitation</button>
 	<div id="step2" style="color:#CC2010"><h3><b>Wait for the exploit initialization to succeed...</b></h3></div>
 	<h2><b><u>Step</u> 3:</b></h2>
 	<button id="btnTrigger" disabled="true" type="button" onclick="triggerX();">Patch NAND Flash Memory</button>
@@ -252,7 +253,7 @@ function triggerX()
 		var y = n.getFullYear();
 		var m = ("0" + (n.getMonth() + 1)).slice(-2);
 		var d = ("0" + n.getDate()).slice(-2);
-		document.getElementById("filePath").innerHTML = "/dev_hdd0/photo/" + y + "/" + m + "/" + d + "/" + "flash_482.jpg";
+		document.getElementById("filePath").innerHTML = "/dev_hdd0/photo/" + y + "/" + m + "/" + d + "/" + "flash_484.jpg";
 		writeEnvInfo();
 		ps3chk();
 	</script>
