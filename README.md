@@ -8,6 +8,10 @@ https://www.psx-place.com/threads/ps3xploit-4-84-hfw-flash-writer-idps-flash-dum
 Official HFW Thread:
 https://www.psx-place.com/threads/update-ps3-hfw-hybrid-firmware-4-84-2-ps3xploit-han-flash-tools-restored-for-4-84-ofw-users.23094/
 
+v2.0.2
+
+    Updated To Support 4.85 HFW
+
 v2.0.1
 
     Updated To Support 4.84 HFW
