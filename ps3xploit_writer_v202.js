@@ -365,7 +365,7 @@ function findJsVariableOffset(name,exploit_data,base,size)
 
 //####################################################################################################################################################################
 function ps3chk(){
-	var fwCompat = ["4.84"];
+	var fwCompat = ["4.85"];
 	var ua = navigator.userAgent;
 	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
 	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
@@ -374,8 +374,7 @@ function ps3chk(){
 		case "PLAYSTATION":
 			switch (fwVersion) {
 				case fwCompat[0]:
-					alert("Your firmware version requires 4.84 HFW (Hybrid Firmware) to be installed, containing exploitable modules.");
-					//alert("Congratulations! We've detected your PlayStation 3 is running FW " + fwVersion + ", which is compatible with PS3Xploit! Enjoy!");
+					alert("ATTENTION!\n\nYour firmware version requires HFW (Hybrid Firmware) to be installed. OFW is not supported!\n\nThis page cannot distinguish between OFW and HFW.");
 					toc_addr=0x6F5558;
 					gadget1_addr=0x097604;
 					gadget2_addr=0x60EFD8; 
@@ -388,7 +387,7 @@ function ps3chk(){
 					break;
 					
 				default:
-					alert("Your PS3 is not on FW 4.84! Your current running FW version is " + fwVersion + ", which is not compatible with PS3Xploit Flasher. All features have been disabled");
+					alert("Your PS3 is not on FW 4.85! Your current running FW version is " + fwVersion + ", which is not compatible with PS3Xploit Flasher. All features have been disabled");
 					disable_btn();
 					disable_cb();
 					break;
